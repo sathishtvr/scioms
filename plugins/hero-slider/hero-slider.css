@@ -4,7 +4,8 @@
 .hero-slider-section {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 650px;
+  min-height: 650px;
   padding: 0;
   background-color: var(--color-primary-dark);
 }
@@ -22,6 +23,12 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+  transition: transform 6s ease;
+}
+
+/* Slow ken-burns zoom on active slide */
+.swiper-slide-active .slide-bg {
+  transform: scale(1.05);
 }
 
 .slide-bg-one {
@@ -42,7 +49,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--color-primary-dark-alpha);
+  background: linear-gradient(
+    135deg,
+    rgba(8, 28, 56, 0.85) 0%,
+    rgba(13, 37, 69, 0.7) 50%,
+    rgba(16, 47, 78, 0.8) 100%
+  );
 }
 
 .slide-content {
@@ -53,33 +65,155 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding-bottom: 5rem;
+  padding-top: 0rem;
+  padding-bottom: 180px; /* Ensures text & buttons are centered above cert bar without overlap */
   color: var(--color-white);
   text-align: center;
 }
 
+/* Entrance animation for slide content */
+.swiper-slide-active .slide-content h3,
+.swiper-slide-active .slide-content h1,
+.swiper-slide-active .slide-content p,
+.swiper-slide-active .slide-content .hero-buttons {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.swiper-slide-active .slide-content h3 {
+  animation-delay: 0.1s;
+}
+
+.swiper-slide-active .slide-content h1 {
+  animation-delay: 0.25s;
+}
+
+.swiper-slide-active .slide-content p {
+  animation-delay: 0.4s;
+}
+
+.swiper-slide-active .slide-content .hero-buttons {
+  animation-delay: 0.55s;
+}
+
+/* Before animation, content is invisible */
+.slide-content h3,
+.slide-content h1,
+.slide-content p,
+.slide-content .hero-buttons {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .slide-content h3 {
-  margin-bottom: 0.625rem;
-  color: var(--color-gray-light);
-  font-size: 1.5rem;
-  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .slide-content h1 {
   margin-bottom: 1.25rem;
   font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  line-height: 1.15;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
 }
 
 .slide-content p {
-  max-width: 800px;
+  max-width: 700px;
   margin-bottom: 2.5rem;
-  color: var(--color-gray-border);
-  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
+}
+
+.hero-buttons .btn-primary {
+  box-shadow: 0 4px 20px rgba(144, 224, 70, 0.35);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-buttons .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(144, 224, 70, 0.5);
+}
+
+.hero-buttons .btn-outline-light {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-buttons .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  .hero-slider-section {
+    height: 880px;
+    min-height: 880px;
+  }
+  .slide-content {
+    padding-bottom: 220px;
+  }
+  .slide-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-slider-section {
+    height: auto;
+    min-height: 980px;
+  }
+  .slide-content {
+    padding-top: 6rem;
+    padding-bottom: 340px;
+  }
+  .slide-content h1 {
+    font-size: 2.2rem;
+  }
+  .slide-content h3 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+  .slide-content p {
+    font-size: 0.95rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-cert-wrapper {
+    bottom: 1rem;
+  }
 }

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" stroke="#0050b3" stroke-width="2.5" fill="none" />
+  
+  <!-- Large Shield -->
+  <path d="M 25 30 L 50 20 L 75 30 C 75 60, 50 85, 50 85 C 50 85, 25 60, 25 30 Z" fill="none" stroke="#0050b3" stroke-width="2.5" stroke-linejoin="round" />
+  <line x1="25" y1="45" x2="75" y2="45" stroke="#0050b3" stroke-width="2.5" />
+  
+  <!-- SOC 2 Text -->
+  <text x="50" y="38" font-family="sans-serif" font-weight="bold" font-size="14" fill="#0050b3" text-anchor="middle">SOC 2</text>
+  
+  <!-- Lock -->
+  <rect x="42" y="60" width="16" height="12" rx="2" fill="none" stroke="#0050b3" stroke-width="2.5" />
+  <path d="M 45 60 V 54 C 45 48, 55 48, 55 54 V 60" fill="none" stroke="#0050b3" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="50" cy="66" r="1.5" fill="#0050b3" />
+  
+  <!-- Circle with checkmark -->
+  <g transform="translate(60, 60)">
+    <circle cx="15" cy="15" r="15" fill="#ffffff" stroke="#0050b3" stroke-width="2.5" />
+    <path d="M 8 15 L 13 20 L 22 10" fill="none" stroke="#0050b3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

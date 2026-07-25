@@ -1,5 +1,4 @@
 // Main custom script file
-// (Currently empty, Swiper initialized in plugins/hero-slider/hero-slider.js)
 
 document.addEventListener("DOMContentLoaded", function() {
   // Initialize RCM Services Swiper
@@ -97,4 +96,88 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+
+  // ==========================================
+  // Scroll Reveal Animation
+  // ==========================================
+  const revealElements = () => {
+    // Section titles and subtitles
+    document.querySelectorAll('.section-title, .section-subtitle').forEach(el => {
+      if (!el.classList.contains('reveal')) el.classList.add('reveal');
+    });
+
+    // Individual cards/items for staggered animation
+    const staggerGroups = [
+      { selector: '.rcm-step', delayIncrement: 0.06 },
+      { selector: '.stat-card', delayIncrement: 0.05 },
+      { selector: '.collab-card', delayIncrement: 0.08 },
+      { selector: '.different-item', delayIncrement: 0.1 },
+      { selector: '.service-slide-card', delayIncrement: 0.1 },
+      { selector: '.specialty-domain-card', delayIncrement: 0.1 },
+      { selector: '.spec-tag', delayIncrement: 0.04 },
+      { selector: '.trust-card', delayIncrement: 0.08 },
+      { selector: '.faq-item', delayIncrement: 0.06 },
+    ];
+
+    staggerGroups.forEach(group => {
+      document.querySelectorAll(group.selector).forEach((el, index) => {
+        if (!el.classList.contains('reveal')) {
+          el.classList.add('reveal');
+          el.style.transitionDelay = `${index * group.delayIncrement}s`;
+        }
+      });
+    });
+
+    // Other standalone elements
+    document.querySelectorAll(
+      '.collab-action, .different-card, .different-center, ' +
+      '.hero-cert-card, .cta-title, .cta-subtitle, .btn-cta, ' +
+      '.footer-col, .who-we-are-title, .who-we-are-subtitle, ' +
+      '.collaborate-title, .collaborate-subtitle, ' +
+      '.specialties-title, .specialties-subtitle, ' +
+      '.faq-title, .faq-subtitle, .trust-title'
+    ).forEach(el => {
+      if (!el.classList.contains('reveal')) el.classList.add('reveal');
+    });
+  };
+
+  // Apply reveal classes
+  revealElements();
+
+  // Intersection Observer for scroll reveal
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          // Don't unobserve - keep watching in case user scrolls up and down
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
+  );
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // ==========================================
+  // Header scroll effect - add shadow on scroll
+  // ==========================================
+  const header = document.getElementById('header');
+  if (header) {
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 50) {
+        header.style.boxShadow = '0 2px 20px rgba(13, 37, 69, 0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+  }
 });
