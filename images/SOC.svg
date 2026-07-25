@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+    <defs>
+        <!-- Gradients for the 3D metallic outer ring -->
+        <linearGradient id="outerBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f4f6f8"/>
+            <stop offset="25%" stop-color="#b8c3cd"/>
+            <stop offset="50%" stop-color="#ffffff"/>
+            <stop offset="75%" stop-color="#8d9dae"/>
+            <stop offset="100%" stop-color="#5a6b7d"/>
+        </linearGradient>
+        
+        <linearGradient id="innerBevel" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#697a8c"/>
+            <stop offset="40%" stop-color="#ccd5df"/>
+            <stop offset="60%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#a4b2c1"/>
+        </linearGradient>
+
+        <!-- Paths for the circular text -->
+        <path id="arc-top" d="M 39 100 A 61 61 0 1 1 161 100" fill="none" />
+        <path id="arc-bot" d="M 26 100 A 74 74 0 0 0 174 100" fill="none" />
+    </defs>
+
+    <!-- Outer metallic edge -->
+    <circle cx="100" cy="100" r="95" fill="url(#outerBevel)" />
+    <!-- Inner slope of metallic edge -->
+    <circle cx="100" cy="100" r="89" fill="url(#innerBevel)" />
+    
+    <!-- Outer White border -->
+    <circle cx="100" cy="100" r="84" fill="#ffffff" />
+    
+    <!-- Main Green background -->
+    <circle cx="100" cy="100" r="81" fill="#519C52" />
+
+    <!-- Inner thin metallic ring -->
+    <circle cx="100" cy="100" r="54" fill="none" stroke="url(#outerBevel)" stroke-width="2" />
+
+    <!-- Circular Text -->
+    <text fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="14" letter-spacing="1.2">
+        <textPath href="#arc-top" startOffset="50%" text-anchor="middle">SOC 2 CERTIFIED</textPath>
+    </text>
+    <text fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="13" letter-spacing="1.5">
+        <textPath href="#arc-bot" startOffset="50%" text-anchor="middle">SECURITY &amp; TRUST</textPath>
+    </text>
+
+    <!-- Center Icon (Padlock with Checkmark) -->
+    <g id="padlock">
+        <!-- Padlock Shackle (Top part) -->
+        <path d="M 82 85 V 68 A 18 18 0 0 1 118 68 V 85" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+        
+        <!-- Padlock Body -->
+        <rect x="68" y="82" width="64" height="48" rx="8" fill="#ffffff" />
+
+        <!-- Checkmark inside the lock (cutout matching the background) -->
+        <path d="M 83 105 L 94 116 L 115 93" fill="none" stroke="#519C52" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+</svg>

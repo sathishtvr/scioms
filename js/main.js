@@ -180,4 +180,25 @@ document.addEventListener("DOMContentLoaded", function() {
       lastScroll = currentScroll;
     }, { passive: true });
   }
+
+  // ==========================================
+  // Back to Top Button
+  // ==========================================
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('active');
+      } else {
+        backToTopBtn.classList.remove('active');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+    <defs>
+        <!-- Gradients for the 3D metallic outer ring -->
+        <linearGradient id="outerBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f4f6f8"/>
+            <stop offset="25%" stop-color="#b8c3cd"/>
+            <stop offset="50%" stop-color="#ffffff"/>
+            <stop offset="75%" stop-color="#8d9dae"/>
+            <stop offset="100%" stop-color="#5a6b7d"/>
+        </linearGradient>
+        
+        <linearGradient id="innerBevel" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#697a8c"/>
+            <stop offset="40%" stop-color="#ccd5df"/>
+            <stop offset="60%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#a4b2c1"/>
+        </linearGradient>
+
+        <!-- Paths for the circular text -->
+        <path id="arc-top" d="M 39 100 A 61 61 0 1 1 161 100" fill="none" />
+        <path id="arc-bot" d="M 26 100 A 74 74 0 0 0 174 100" fill="none" />
+    </defs>
+
+    <!-- Outer metallic edge -->
+    <circle cx="100" cy="100" r="95" fill="url(#outerBevel)" />
+    <!-- Inner slope of metallic edge -->
+    <circle cx="100" cy="100" r="89" fill="url(#innerBevel)" />
+    
+    <!-- Outer White border -->
+    <circle cx="100" cy="100" r="84" fill="#ffffff" />
+    
+    <!-- Main Dark Blue background -->
+    <circle cx="100" cy="100" r="81" fill="#1E4E79" />
+
+    <!-- Inner thin metallic ring -->
+    <circle cx="100" cy="100" r="54" fill="none" stroke="url(#outerBevel)" stroke-width="2" />
+
+    <!-- Circular Text -->
+    <text fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="14" letter-spacing="1.2">
+        <textPath href="#arc-top" startOffset="50%" text-anchor="middle">ISMS CERTIFIED</textPath>
+    </text>
+    <text fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="12" letter-spacing="1.2">
+        <textPath href="#arc-bot" startOffset="50%" text-anchor="middle">ISO 27001 COMPLIANT</textPath>
+    </text>
+
+    <!-- Center Icon (Globe) -->
+    <g id="globe" stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round">
+        <!-- Outer circle of the globe -->
+        <circle cx="100" cy="100" r="30" />
+        
+        <!-- Horizontal equator line -->
+        <line x1="70" y1="100" x2="130" y2="100" />
+        
+        <!-- Vertical prime meridian line -->
+        <line x1="100" y1="70" x2="100" y2="130" />
+        
+        <!-- Curved longitude lines -->
+        <ellipse cx="100" cy="100" rx="14" ry="30" />
+        
+        <!-- Curved latitude lines -->
+        <ellipse cx="100" cy="100" rx="30" ry="12" />
+    </g>
+</svg>
