@@ -210,9 +210,9 @@ h2 {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px) scale(0.8);
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+  transition: opacity 0.3s var(--transition-smooth),
+              visibility 0.3s var(--transition-smooth),
+              transform 0.3s var(--transition-smooth),
               box-shadow 0.3s ease;
 }
 
