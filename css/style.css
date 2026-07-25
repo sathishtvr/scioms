@@ -81,9 +81,9 @@ h2 {
   width: 65%;
   padding: 1.5rem 2rem;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 12px 35px rgba(13, 37, 69, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: var(--color-white-98);
+  box-shadow: 0 12px 35px var(--color-navy-alpha-12);
+  border: 1px solid var(--color-white-90);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -150,7 +150,7 @@ h2 {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(144, 224, 70, 0.4);
+  box-shadow: 0 6px 20px var(--color-green-light-40);
 }
 
 .hero-buttons .btn-primary {
@@ -160,7 +160,7 @@ h2 {
 .btn-outline,
 .btn-outline-light {
   padding: 0.875rem 2rem;
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border: 1.5px solid var(--color-white-30);
   border-radius: 50px;
   background: transparent;
   color: var(--color-white);
@@ -172,7 +172,7 @@ h2 {
 
 .btn-outline:hover,
 .btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-white-10);
   border-color: var(--color-white);
 }
 
@@ -205,7 +205,7 @@ h2 {
   justify-content: center;
   align-items: center;
   font-size: var(--font-size-2xl);
-  box-shadow: 0 8px 25px rgba(144, 224, 70, 0.4);
+  box-shadow: 0 8px 25px var(--color-green-light-40);
   z-index: 999;
   opacity: 0;
   visibility: hidden;
@@ -224,6 +224,6 @@ h2 {
 
 .back-to-top:hover {
   transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 12px 30px rgba(144, 224, 70, 0.6);
+  box-shadow: 0 12px 30px var(--color-green-light-60);
   color: var(--color-primary-dark);
 }

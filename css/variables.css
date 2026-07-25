@@ -41,6 +41,76 @@
   --color-bg-card-blue: #d4e0ed;
   --color-footer-bg: #081c38;
   
+  /* White Alpha Variables */
+  --color-white-98: rgba(255, 255, 255, 0.98);
+  --color-white-95: rgba(255, 255, 255, 0.95);
+  --color-white-90: rgba(255, 255, 255, 0.9);
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-75: rgba(255, 255, 255, 0.75);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-white-30: rgba(255, 255, 255, 0.3);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+  --color-white-15: rgba(255, 255, 255, 0.15);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-08: rgba(255, 255, 255, 0.08);
+  --color-white-06: rgba(255, 255, 255, 0.06);
+
+  /* Primary Dark Navy Alpha Variables */
+  --color-navy-alpha-70: rgba(13, 37, 69, 0.7);
+  --color-navy-alpha-30: rgba(13, 37, 69, 0.3);
+  --color-navy-alpha-20: rgba(13, 37, 69, 0.2);
+  --color-navy-alpha-15: rgba(13, 37, 69, 0.15);
+  --color-navy-alpha-12: rgba(13, 37, 69, 0.12);
+  --color-navy-alpha-10: rgba(13, 37, 69, 0.1);
+  --color-navy-alpha-08: rgba(13, 37, 69, 0.08);
+  --color-navy-alpha-07: rgba(13, 37, 69, 0.07);
+  --color-navy-alpha-06: rgba(13, 37, 69, 0.06);
+  --color-navy-alpha-05: rgba(13, 37, 69, 0.05);
+  --color-navy-alpha-04: rgba(13, 37, 69, 0.04);
+  --color-navy-alpha-03: rgba(13, 37, 69, 0.03);
+
+  /* Green Light Glow & Overlay Alphas */
+  --color-green-light-90: rgba(144, 224, 70, 0.9);
+  --color-green-light-65: rgba(144, 224, 70, 0.65);
+  --color-green-light-60: rgba(144, 224, 70, 0.6);
+  --color-green-light-55: rgba(144, 224, 70, 0.55);
+  --color-green-light-50: rgba(144, 224, 70, 0.5);
+  --color-green-light-45: rgba(144, 224, 70, 0.45);
+  --color-green-light-40: rgba(144, 224, 70, 0.4);
+  --color-green-light-35: rgba(144, 224, 70, 0.35);
+  --color-green-light-30: rgba(144, 224, 70, 0.3);
+  --color-green-light-25: rgba(144, 224, 70, 0.25);
+  --color-green-light-20: rgba(144, 224, 70, 0.2);
+  --color-green-light-12: rgba(144, 224, 70, 0.12);
+  --color-green-light-10: rgba(144, 224, 70, 0.1);
+  --color-green-light-08: rgba(144, 224, 70, 0.08);
+  --color-green-light-06: rgba(144, 224, 70, 0.06);
+  --color-green-light-03: rgba(144, 224, 70, 0.03);
+
+  /* Green Mid Alphas */
+  --color-green-mid-50: rgba(65, 200, 110, 0.5);
+  --color-green-mid-45: rgba(65, 200, 110, 0.45);
+  --color-green-mid-40: rgba(65, 200, 110, 0.4);
+  --color-green-mid-30: rgba(65, 200, 110, 0.3);
+  --color-green-mid-10: rgba(65, 200, 110, 0.1);
+  --color-green-mid-08: rgba(65, 200, 110, 0.08);
+  --color-green-mid-0: rgba(65, 200, 110, 0);
+
+  /* Cyan Alphas */
+  --color-cyan-70: rgba(14, 165, 233, 0.7);
+  --color-cyan-35: rgba(14, 165, 233, 0.35);
+  --color-cyan-25: rgba(14, 165, 233, 0.25);
+  --color-cyan-15: rgba(14, 165, 233, 0.15);
+
+  /* Black / Dark Alphas */
+  --color-black-55: rgba(0, 0, 0, 0.55);
+  --color-black-30: rgba(0, 0, 0, 0.3);
+  --color-black-10: rgba(0, 0, 0, 0.1);
+  --color-black-06: rgba(0, 0, 0, 0.06);
+  --color-black-015: rgba(0, 0, 0, 0.015);
+  --color-hero-bg-alpha1: rgba(8, 28, 56, 0.85);
+  --color-hero-bg-alpha2: rgba(16, 47, 78, 0.8);
+  
   /* Typography Font Sizes */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.85rem;
@@ -54,12 +124,12 @@
   --font-size-5xl: 2.8rem;
 
   /* Gradients & Shadows */
-  --gradient-green: linear-gradient(135deg, #90e046, #41c86e);
+  --gradient-green: linear-gradient(135deg, var(--color-green-light), var(--color-green-mid));
   --gradient-green-hover: linear-gradient(135deg, #7dd63e, #36b85e);
-  --gradient-dark: linear-gradient(135deg, #0d2545, #1a4a7a);
-  --shadow-sm: 0 2px 8px rgba(13, 37, 69, 0.06);
-  --shadow-md: 0 8px 25px rgba(13, 37, 69, 0.08);
-  --shadow-lg: 0 20px 50px rgba(13, 37, 69, 0.12);
+  --gradient-dark: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-navy));
+  --shadow-sm: 0 2px 8px var(--color-navy-alpha-06);
+  --shadow-md: 0 8px 25px var(--color-navy-alpha-08);
+  --shadow-lg: 0 20px 50px var(--color-navy-alpha-12);
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
