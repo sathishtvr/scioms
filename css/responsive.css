@@ -1,0 +1,227 @@
+/* ==========================================
+   SCIO - Responsive Stylesheet
+========================================== */
+
+/* ==========================================
+   Large Desktop Screens (max-width: 1200px)
+========================================== */
+@media (max-width: 1200px) {
+  /* RCM Steps */
+  .rcm-steps-container {
+    flex-wrap: wrap;
+    gap: 2rem 0;
+  }
+
+  .rcm-steps-container::before {
+    display: none;
+  }
+
+  .rcm-step {
+    flex: 0 0 20%;
+  }
+
+  /* Who We Are Stats */
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================
+   Desktops / Large Tablets (max-width: 1024px)
+========================================== */
+@media (max-width: 1024px) {
+  .different-graphic-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* ==========================================
+   Tablets & Medium Screens (max-width: 991px)
+========================================== */
+@media (max-width: 991px) {
+  /* Hero Slider */
+  .hero-slider-section {
+    height: 880px;
+    min-height: 880px;
+  }
+
+  .slide-content {
+    padding-bottom: 220px;
+  }
+
+  .slide-content h1 {
+    font-size: var(--font-size-5xl);
+  }
+
+  /* RCM Steps */
+  .rcm-step {
+    flex: 0 0 25%;
+  }
+
+  /* Who We Are Stats */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Collaborate */
+  .collab-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* What Makes SCIO Different */
+  .different-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .different-col-left .different-item {
+    flex-direction: row-reverse;
+  }
+
+  .different-col-left .different-text {
+    text-align: start !important;
+  }
+
+  .different-center {
+    order: -1;
+    margin: 0 auto 2rem auto;
+  }
+
+  .different-item:hover,
+  .different-col-left .different-item:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Specialties & Trust Cards */
+  .specialties-cards,
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==========================================
+   Desktop Min-Width (min-width: 768px)
+========================================== */
+@media (min-width: 768px) {
+  .cert-item:not(:last-child) {
+    border-right: 1px solid var(--color-gray-border);
+    border-bottom: none;
+  }
+}
+
+/* ==========================================
+   Mobile Landscape & Small Devices (max-width: 767px)
+========================================== */
+@media (max-width: 767px) {
+  /* Hero Slider */
+  .hero-slider-section {
+    height: auto;
+    min-height: 980px;
+  }
+
+  .slide-content {
+    padding-top: 6rem;
+    padding-bottom: 340px;
+  }
+
+  .slide-content h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  .slide-content h3 {
+    font-size: var(--font-size-sm);
+    letter-spacing: 2px;
+  }
+
+  .slide-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cert-wrapper {
+    bottom: 1rem;
+  }
+
+  /* Cert Bar */
+  .cert-item:not(:last-child) {
+    padding-bottom: 0.9375rem;
+    border-bottom: 1px solid var(--color-gray-border);
+  }
+
+  .cert-item {
+    padding-top: 0.9375rem;
+  }
+
+  /* RCM Steps */
+  .rcm-step {
+    flex: 0 0 33.33%;
+  }
+
+  /* Who We Are Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Collaborate */
+  .collab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collab-img {
+    height: 200px;
+  }
+
+  /* What Makes SCIO Different */
+  .different-card {
+    padding: 2rem 1.25rem;
+  }
+
+  /* Specialties & Trust Cards */
+  .specialties-cards,
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FAQ */
+  .faq-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .faq-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ==========================================
+   Small Mobile Devices (max-width: 575px)
+========================================== */
+@media (max-width: 575px) {
+  .rcm-step {
+    flex: 0 0 50%;
+  }
+}
+
+/* ==========================================
+   Extra Small Devices (max-width: 480px)
+========================================== */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

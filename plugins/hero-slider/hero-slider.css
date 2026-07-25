@@ -118,7 +118,7 @@
 .slide-content h3 {
   margin-bottom: 0.75rem;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -144,7 +144,7 @@
   max-width: 700px;
   margin-bottom: 2.5rem;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
   line-height: 1.7;
 }
 
@@ -175,45 +175,4 @@
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-2px);
-}
-
-@media (max-width: 991px) {
-  .hero-slider-section {
-    height: 880px;
-    min-height: 880px;
-  }
-  .slide-content {
-    padding-bottom: 220px;
-  }
-  .slide-content h1 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-slider-section {
-    height: auto;
-    min-height: 980px;
-  }
-  .slide-content {
-    padding-top: 6rem;
-    padding-bottom: 340px;
-  }
-  .slide-content h1 {
-    font-size: 2.2rem;
-  }
-  .slide-content h3 {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-  }
-  .slide-content p {
-    font-size: 0.95rem;
-  }
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero-cert-wrapper {
-    bottom: 1rem;
-  }
 }
