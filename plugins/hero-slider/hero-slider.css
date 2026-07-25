@@ -1,0 +1,85 @@
+/* ==========================================
+   Hero Slider Styles
+========================================== */
+.hero-slider-section {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  padding: 0;
+  background-color: var(--color-primary-dark);
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-bg-one {
+  background-image: url("../../images/herobanner/hero-bg.png");
+}
+
+.slide-bg-two {
+  background-image: url("../../images/herobanner/hero-bg-2.png");
+}
+
+.slide-bg-three {
+  background-image: url("../../images/herobanner/hero-bg-3.png");
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary-dark-alpha);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 5rem;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.slide-content h3 {
+  margin-bottom: 0.625rem;
+  color: var(--color-gray-light);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.slide-content h1 {
+  margin-bottom: 1.25rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.slide-content p {
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+  color: var(--color-gray-border);
+  font-size: 1.125rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.25rem;
+}
